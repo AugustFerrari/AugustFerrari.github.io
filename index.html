@@ -123,15 +123,30 @@
         <section class="contactof">
             <hr>
             <div id="contacto" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-                <form action="configuracionemail.php" method="POST">
+                <form action="https://sheetdb.io/api/v1/97emtezelau86" method="POST" id="sheetdb-form">
                     <h3>Contacto</h3>
-                    <input name="nombre" placeholder="Nombre" required>
-                    <input name="correo" placeholder="Correo" required>
-                    <input name="telefono" placeholder="Telefono" required>
-                    <textarea name="msg" placeholder="Escribe Aqui" required></textarea>
+                    <input name="data[nombre]" placeholder="Nombre" required>
+                    <input name="data[correo]" placeholder="Correo" required>
+                    <input name="data[telefono]" placeholder="Telefono" required>
+                    <textarea name="data[msg]" placeholder="Escribe Aqui" required></textarea>
                     <input type="hidden" id="eviarcorreo" name="eviarcorreo" value="eviarcorreo">
                     <input id="botoncontacto" type="submit" value="ENVIAR" class="btn2 btn--3">
                 </form>
+                <script>
+                    var form = document.getElementById('sheetdb-form');
+                    form.addEventListener("submit", e => {
+                      e.preventDefault();
+                      fetch(form.action, {
+                          method : "POST",
+                          body: new FormData(document.getElementById("sheetdb-form")),
+                      }).then(
+                          response => response.json()
+                      ).then((html) => {
+                        swal ( "Genial" ,  "Tu mensaje a sido enviado!" ,  "success" )
+                      });
+                    });
+                  </script>
+            </div>
             </div>
             <hr class="conhr">
         </section>
