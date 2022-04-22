@@ -212,6 +212,23 @@ a:hover {
     font-size: 25px;
 }
 
+.diplo {
+    color: rgb(233, 255, 31);
+    margin-top: 40px;
+    font-size: 29px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+}
+
+.imgdiploma {
+    width: 40%;
+    height: 40%;
+}
+
+.spacio {
+    margin-bottom: 4px;
+}
+
 hr {
     width: 100%;
     height: 3px;
