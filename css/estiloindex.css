@@ -256,18 +256,12 @@ hr {
 
 
 .bannerarg h3 {
-  color: rgb(244, 255, 196);
+  color: rgb(105, 105, 105);
   font-family: 'Comforter', cursive;
   font-size: 180%;
   display: inline-block;
   margin: 120px 0 0 0;
   padding: 10px;
-}
-
-.bannerarg h3:hover {
-    background: #000;
-    opacity: 0.5;   
-    border-radius: 30px; 
 }
 
 .bannerarg p {
@@ -282,7 +276,7 @@ hr {
 .bannerarg p:hover {
     background: #000;
     opacity: 0.7;   
-    border-radius: 30px; 
+    border-radius: 9px; 
 }
 
 .bannerarg img {
